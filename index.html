@@ -1,1 +1,365 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+	<title>Lakeridge Health Portal</title>
+<!--
+
+Template 2080 Minimax
+
+http://www.tooplate.com/view/2080-minimax
+
+-->
+	<!-- stylesheet css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/nivo-lightbox.css">
+	<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- google web font css -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body data-spy="scroll" data-target=".navbar-collapse">
+	
+<!-- navigation -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+				<span class="icon icon-bar"></span>
+			</button>
+			<a href="#home" class="navbar-brand smoothScroll"> 
+			<!-- Lakeridge Health -->
+				<img src="https://www.lakeridgehealth.on.ca/en/images/structure/lakeridge-logo.png" width="200" height="70" >
+			</a>
+		</div>
+		<div class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#home" class="smoothScroll">HOME</a></li>
+				<li><a href="#prescriptions" class="smoothScroll">PRESCRIPTIONS</a></li>
+				<li><a href="#appointments" class="smoothScroll">APPOINTMENTS</a></li>
+				<li><a href="#pricing" class="smoothScroll">SCHEDULE</a></li>
+			</ul>
+		</div>
+	</div>
+</div>		
+
+<!-- home section -->
+<div id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6">
+				<h2>Welcome to</h2>
+				<h1 style = "color:#dc5034;" >Lakeridge Health <strong>Patient Portal</strong></h1>
+				<p >A tool to help scheduling, notifying and keep patients up to date and in communication with their doctors and to help streamline transition between medical professionals.</p>
+				<a href="#appointments" class="btn btn-default smoothScroll">BOOK NOW</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- appointments section -->
+<div id="appointments">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h2>Book an Appointment by:</h2>
+			</div>
+			<div class="col-md-1 col-sm-1"></div>
+			<div class="col-md-12 col-sm-12">
+				<h3>1. Send a Request and we'll get in touch</h3>
+			</div>
+			<form action="#" method="post" role="form">
+				<div class="col-md-1 col-sm-1"></div>
+				<div class="col-md-10 col-sm-10">
+					<div class="col-md-6 col-sm-6">
+						<input id="name" type="text" class="form-control" placeholder="Full name" value = ''>	
+				  	</div>
+					<div class="col-md-6 col-sm-6">
+						<input name="phone" type="tel" class="form-control" id="phone" placeholder="0000000000">
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+						<input type="checkbox" id="morning" > I prefer mornings<br>
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+  						<input type="checkbox" id="saturday" > I prefer Saturdays<br>
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+  						<input type="checkbox" id="evening"> I prefer evenings<br>
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+  						<input type="checkbox" id="weekday" > I prefer weekdays<br>
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+  						<input type="checkbox" id="afternoon"> I prefer afternoons<br>
+				  	</div>
+				  	<div class="col-md-6 col-sm-6">
+  						<input type="checkbox" id="sms" value="False"> I would like to be contacted via SMS<br>
+				  	</div>
+                    <div class="col-md-12 col-sm-12">
+						<select class="form-control" id="location" value = ''>
+						    <option value="1301 Sycamore Street">1301 Sycamore Street</option>
+						    <option value="1301 North 6th Street">1301 North 6th Street</option>
+						    <option value="110 S 17th Street">110 S 17th Street</option>
+						    <option value="149 Wilson Street">149 Wilson Street</option>
+						  </select>
+	    	  	  	</div>
+					<div class="col-md-12 col-sm-12">
+						<textarea rows="5" type="text" class="form-control" id="reason" value = "" placeholder = 'Reason for appointment'></textarea>
+					</div>
+					<div class="col-md-12 col-sm-12">
+						<p id = "responseText">Unless you selected SMS, you will recieve a call to the specified phone number as soon as possible with available timeslots.</p>
+					</div>
+<!--					<div class="col-md-4 col-sm-4">
+						<button id="submitButton" class="form-control" value="SEND REQUEST"> SEND REQUEST</button>
+					</div>
+					     -->
+				</div>
+				<div class="col-md-1 col-sm-1"></div>
+			</form>
+		</div>
+	</div>
+</div>
+<!--
+<div class="col-md-1 col-sm-1"></div>
+	<div class="col-md-10 col-sm-10">
+		<div class="col-md-12 col-sm-12">
+			<button id="submitButton" class="form-control" value="SEND REQUEST"> SEND REQUEST</button>
+	</div>
+</div>
+-->
+<div align="center" id="submit1">  
+	<button  class="btn btn-warning" style="width:920px" id="submitButton1">SEND REQUEST</button>
+</div>
+
+<!-- EXPERIMENT -> ADDING SPARK ROOM -->
+<div class = "container">
+	<div class="row">
+	<div class="col-md-1 col-sm-1"></div>
+		<div align="center">
+			<h2>OR</h2>
+		</div>
+		<div class="col-md-1 col-sm-1"></div>
+		<div class="col-md-12 col-sm-12">
+			<h3>2. Start a Spark Room</h3>
+			<div class="col-md-10 col-sm-10">
+				<p id = "responseText2">A receptionist will initiate a real time, 1 on 1 Spark room to help schedule your appointment.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div align="center">  
+	<input id="spark_name" style="width:920px" type="text" class="form-control" id="spark_name" value = '' placeholder="Full name as shown on Spark">	
+	<br>
+	<button class="btn btn-warning" style="width:920px" id="sparkButton" value="sparkButton"> START CHAT</button>
+</div>
+
+<br>
+
+<!-- divider section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-1 col-sm-1"></div>
+		<div class="col-md-10 col-sm-10">
+			<hr>
+		</div>
+		<div class="col-md-1 col-sm-1"></div>
+	</div>
+</div>
+
+<br>
+<!-- team section -->
+
+
+<div id="prescriptions">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h2>All Prescriptions</h2>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="images/prescription1.jpg" class="img-responsive" alt="team img">
+				<h3>Prilosec OTC oral</h3>
+				<h4>July 7th, 2015</h4>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="images/prescription2.jpg" class="img-responsive" alt="team img">
+				<h3>mirtazapine oral</h3>
+				<h4 id = "testtext">January 3rd, 2016</h4>
+			</div>
+			<div class="col-md-3 col-sm-6">
+				<img src="images/prescription3.jpg" class="img-responsive" alt="team img">
+				<h3>benzonatate oral</h3>
+				<h4>March 13th, 2016</h4>
+			</div>
+
+
+		</div>
+	</div>
+</div>
+<br>
+
+<!-- divider section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-1 col-sm-1"></div>
+		<div class="col-md-10 col-sm-10">
+			<hr>
+		</div>
+		<div class="col-md-1 col-sm-1"></div>
+	</div>
+</div>
+
+<br>
+
+
+
+<!-- Messaging section 
+<div id="message">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<h2>Our Pricing</h2>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-10">
+				<div class="plan">
+					<div class="plan-title">
+						<h3>Starter</h3>
+						<small>$100 per month</small>
+					</div>
+					<ul>
+						<li>100 GB STORAGE</li>
+						<li>10 TB BANDWIDTH</li>
+						<li>10 BASIC THEMES</li>
+						<li>24-HOUR RESPONSE</li>
+					</ul>
+					<button class="btn btn-warning">Sign Up</button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-10">
+				<div class="plan">
+					<div class="plan-title">
+						<h3>Business</h3>
+						<small>$350 per month</small>
+					</div>
+					<ul>
+						<li>1,000 GB STORAGE</li>
+						<li>50 TB BANDWIDTH</li>
+						<li>50 PRO THEMES</li>
+						<li>1-HOUR RESPONSE</li>
+					</ul>
+					<button class="btn btn-warning">Sign Up</button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 col-xs-10">
+				<div class="plan">
+					<div class="plan-title">
+						<h3>Advanced</h3>
+						<small>$500 per month</small>
+					</div>
+					<ul>
+						<li>2,000 GB STORAGE</li>
+						<li>100 TB BANDWIDTH</li>
+						<li>100 PREMIUM THEMES</li>
+						<li>30-MIN RESPONSE</li>
+					</ul>
+					<button class="btn btn-warning">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+
+<!-- divider section 
+<div class="container">
+	<div class="row">
+		<div class="col-md-1 col-sm-1"></div>
+		<div class="col-md-10 col-sm-10">
+			<hr>
+		</div>
+		<div class="col-md-1 col-sm-1"></div>
+	</div>
+</div>
+
+<!-- footer section 
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<h2>Our Office</h2>
+				<p>101 Clean Street, California, CA 10110</p>
+				<p>Email: <span>hello@company.com</span></p>
+				<p>Phone: <span>010-020-0340</span></p>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h2>Social Us</h2>
+				<ul class="social-icons">
+					<li><a href="#" class="fa fa-facebook"></a></li>
+					<li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+					<li><a href="#" class="fa fa-dribbble"></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<br>
+
+<!-- divider section 
+<div class="container">
+	<div class="row">
+		<div class="col-md-1 col-sm-1"></div>
+		<div class="col-md-10 col-sm-10">
+			<hr>
+		</div>
+		<div class="col-md-1 col-sm-1"></div>
+	</div>
+</div>
+
+<!-- copyright section 
+<div class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12">
+				<p>Copyright &copy; 2016 Minimax Digital Firm 
+                
+                - Design: <a rel="nofollow" href="http://www.tooplate.com" target="_parent">Tooplate</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- scrolltop section 
+<a href="#top" class="go-top"><i class="fa fa-angle-up"></i></a>
+
+
+<!-- javascript js -->	
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/timeslotDB.js"></script>
+
+</body>
+</html>
